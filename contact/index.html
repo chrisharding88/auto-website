@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang ="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Harding's Auto Works | Contact</title>
+		<link rel="stylesheet" href="../stylesheets/reset.css">
+		<link rel="stylesheet" href="../stylesheets/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	</head>
+	<body style = "font-family: 'Shrikhand', cursive;
+">
+		<header>
+			<nav class ="navbar-navbar default" >
+				<div class = "container-fluid">
+					<div class = "navbar-header">
+						<h1 class="title"><img src="../img/car-icon.jpg" alt="icon of a car" class="icon">  Harding's Auto Works</h1>
+						<ul class="nav justify-content-end" style ="margin-right:80px; padding: 20px;">
+							<li><a href="../index.html" id="home" class="transition">Home</a></li>
+							<li><a href="../service/index.html" id="service" class="transition">Services</a></li>
+							<li><a href="#" id="contact" class="selected">Contact</a></li>				
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<div class = "page-body" style="margin-top:80px; margin-left: 500px;">
+			<div id="messages" class="well" ng-show="sentMessage"></div>
+			<h1 class ="sub-title" style="margin-left: 250px;">Contact</h1>
+
+			<section class="appointment" style="display: inline-block;">
+				<p>To schedule an appointment with us, please fill out the information below:</p>
+			<div ng-app="myapp" ng-controller="formcontroller">
+				<form name ="email-form" method ="post" action="sendmail.php" ng-submit="processForm">
+					<div class="form-group" ng-class="{'has-error':errorFirstName}">
+						<br>First Name <span class="text-danger">*</span></br>
+						<input type="text" name="FirstName" size="30" ng-model="formData.FirstName" class="form-control"/>
+						<span class="help-block" ng-show="errorFirstName"></span>		
+					</div>
+					<div class="form-group" ng-class="{'has-error':errorLastName}">
+						<br>Last Name<span class="text-danger">*</span></br>
+						<input type="text" name="LastName" size="30" ng-model="formData.LastName" class="form-control"/>
+						<span class="help-block" ng-show="errorLastName"></span>
+					</div>
+					<div class ="form-group" ng-class="{'has-error':errorEmail}">
+						<br>Email<span class="text-danger">*</span></br>
+						<input type="text" name="Email" size="30" ng-model="formData.Email" class="form-control"/>
+						<span class="help-block" ng-show="errorEmail"></span>
+					</div>
+					<div class ="form-group" ng-class="{'has-error':errorPrimaryPhone}">
+						<br>Primary Phone<span class="text-danger">*</span></br>
+						<input type="text" name="PrimaryPhone" size="30" ng-model="formData.PrimaryPhone" class="form-control"/>
+						<span class="help-block" ng-show="errorPrimaryPhone"></span>
+					</div>
+					<div class ="form-group">
+						<br>Secondary Phone (if needed)</br>
+						<input type="text" name="SecondaryPhone" size="30" ng-model="formData.SecondaryPhone" class="form-control" />
+					</div>
+					<div class ="form-group" ng-class="{'has-error':errorMessage}">
+						<br>Message <span class="text-danger">*</span></br>
+						<textarea name="Message" cols="60" rows="10" ng-model="formData.Message" class="form-control"></textarea>
+						<span class="help-block" ng-show="errorMessage"></span>
+					</div>	
+					<div class="form-group">
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>				
+				</form>
+				
+			</div>	
+		</div>
+
+	<div id = "location" style="display: inline-block; margin-top: 80px; margin-left: 500px;">
+		<p>Our Location is:</p>
+		<p>1543 A Hook Road</p>
+		<p>Folcroft, PA 19082</p>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.0514621253456!2d-75.2776712488899!3d39.89548007932817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c3a0e745a567%3A0x1405d2fceadf6b03!2s1543+Hook+Rd%2C+Sharon+Hill%2C+PA+19079!5e0!3m2!1sen!2sus!4v1522022957652" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>		
+	</div>
+
+	<footer>
+		<div id="copywrite" style="display: inline-block;">
+			&copy; All rights reserved.
+			<p>1543 A Hook Rd, Folcroft, PA 19082</p>
+			<p>info@hardingautoworks.com</p>
+		</div>
+	</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/js/contact.js"></script>
+
+	</body>
+</html>

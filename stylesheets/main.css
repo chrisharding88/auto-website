@@ -1,0 +1,84 @@
+
+
+.icon {
+	width: 50px;
+	height: 40px;
+}
+
+.title {
+	margin-left: 60px;
+	margin-top: 30px;
+	color: white;
+	display: block;
+
+}
+
+ul.nav justify-content-end: {
+	float: right;
+
+}
+
+#home,
+#service,
+#contact{
+	color: white;
+    text-decoration:none;
+}
+
+#home:hover,
+#service:hover,
+#contact:hover{
+	color: black;
+	text-decoration: none;
+}
+
+
+
+
+
+	
+
+
+
+
+.navbar-header{
+	display: inline;
+
+}	
+
+nav {
+	background-color: #00FED3;
+	min-height:	80px;
+}
+
+footer {
+	background-color: #00FED3;
+	min-height:	80px;
+}
+
+.title {
+	float: left;
+}
+
+ul li {
+	padding:18px;
+	margin-left: 25px;
+	font-size: 21px;
+}
+
+
+.image-container{
+	width: 100%;
+	height: auto;
+	position: relative;
+	height: 700px;
+}
+
+.img-fade{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 700px;
+	width: 1900px;
+	transition: all 5s;
+}
